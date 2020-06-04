@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launchpad - ADAPEI de la Meuse</title>
+  <meta name="description" content="Launchpad est un lanceur rapide d'application sous la forme d'une page web">
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff;
+      color: #212529;
+      font-family: "Liberation Sans";
+
+      /* Flexbox pour coller le footer en bas */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Banniere de bienvenue */
+    .welcome-banner {
+      background-color: rgba(0, 0, 0, .025);
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    /* Pied de page */
+    .main-footer {
+      background-color: rgba(0, 0, 0, .025);
+      padding: 1rem 2rem;
+      margin-top: auto;
+    }
+
+    /* Mode sombre pour ceux qui veulent */
+    @media screen and (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .welcome-banner {
+        background-color: rgba(255, 255, 255, .05);
+      }
+
+      .main-footer {
+        background-color: rgba(255, 255, 255, .05);
+      }
+    }
+
+    /* Grille principale */
+    .grid {
+      display: grid;
+      justify-content: center;
+      padding: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-auto-rows: minmax(150px, 1fr);
+      grid-gap: .5rem;
+    }
+
+    /* Cellule */
+    .cell {
+      /* Position & taille */
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      /* Flexbox */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Apparence */
+      background-color: #F44336;
+      color: #ffffff;
+    }
+
+    /* Moyenne cellule */
+    .cell.cell-md {
+      grid-column: span 2;
+      padding: 2rem;
+    }
+
+    /* Grande cellule*/
+    .cell.cell-lg {
+      grid-column: span 2;
+      grid-row: span 2;
+      padding: 4rem;
+    }
+
+    /* Cellule vide */
+    .cell:empty {
+      background-size: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='rgba(255,255,255,.1)' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z'/%3E%3C/svg%3E");
+    }
+
+    /* Overlay cellule */
+    .cell::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #ffffff;
+      opacity: 0;
+      will-change: opacity;
+      transition: opacity .1s ease-out;
+    }
+
+    .cell:hover::after {
+      opacity: .2;
+    }
+
+    .cell:focus::after {
+      opacity: .3;
+    }
+
+    /* Images dans les cellules*/
+    .cell img,
+    .cell svg {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Banniere de bienvenue -->
+  <header class="welcome-banner">
+    <h1>Bienvenue sur Launchpad !</h1>
+    <p>Launchpad est un lanceur rapide d'application sous la forme d'une page web</p>
+  </header>
+  <!-- Grille principale -->
+  <div class="grid">
+    <!-- <a href="https://example.com/" class="cell" target="_blank" style="background-color: #ff0000;--color: #ffffff;">Inserez votre texte ou image ici</a> -->
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #F44336;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #E91E63;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #9C27B0;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #3F51B5;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #2196F3;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #03A9F4;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #00BCD4;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #009688;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #4CAF50;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #8BC34A;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #CDDC39;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #FFEB3B;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #FFC107;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #FF9800;color: #ffffff;"></a>
+    <a href="https://example.com/" class="cell" target="_blank" style="background-color: #FF5722;color: #ffffff;"></a>
+  </div>
+  <!-- Pied de page -->
+  <footer class="main-footer">
+    © 2020 ADAPEI de la Meuse - <a href="https://github.com/adapei-meuse/launchpad">GitHub</a>
+  </footer>
+</body>
+
+</html>
