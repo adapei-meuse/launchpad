@@ -112,6 +112,13 @@
       transition: opacity .1s ease-out;
     }
 
+    /* Minimiser les animations */
+    @media screen and (prefers-reduced-motion: reduce) {
+      .cell::after {
+        transition: none;
+      }
+    }
+
     /* Cellule en hover */
     .cell:hover::after {
       opacity: .2;
