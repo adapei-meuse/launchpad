@@ -5,6 +5,13 @@
   --cell-height: var(--cell-size, 150px);
 }
 
+/* Augmente la taille sur grands ecrans */
+@media screen and (min-width: 1280px) {
+  :root {
+    --cell-size: 200px;
+  }
+}
+
 /* Corps de page */
 body {
   margin: 0;
