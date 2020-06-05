@@ -1,15 +1,8 @@
 /* Element racine */
 :root {
-  --cell-size: 150px;
+  --cell-size: 175px;
   --cell-width: var(--cell-size, 150px);
   --cell-height: var(--cell-size, 150px);
-}
-
-/* Augmente la taille sur grands ecrans */
-@media screen and (min-width: 1280px) {
-  :root {
-    --cell-size: 200px;
-  }
 }
 
 /* Corps de page */
