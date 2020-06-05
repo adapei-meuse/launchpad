@@ -19,5 +19,6 @@ Par exemple, si on a un serveur Nginx qui écoute à l'adresse https://launchpad
 Cette application inclut les logos de certaines marques, dont voici les attributions & la source des images :
 
 - GLPI, par GLPI Project (converti en svg) : https://github.com/glpi-project/glpi/blob/9.4/bugfixes/pics/logos/logo-glpi-vector-white.eps
+- Centreon, par Centreon : https://www.centreon.com/societe/ressources/
 - Office 365, par Microsoft (orange modifié en blanc) : https://news.microsoft.com/ofc365_rgb_orng166/
 - FOG project, Copyright © FOG Project 2012-2020 : https://github.com/FOGProject/
