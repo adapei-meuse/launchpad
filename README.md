@@ -23,3 +23,4 @@ Cette application inclut les logos de certaines marques, dont voici les attribut
 - Office 365, par Microsoft (orange modifié en blanc) : https://news.microsoft.com/ofc365_rgb_orng166/
 - TeamViewer Management Console : https://login.teamviewer.com/LogOn
 - FOG project, Copyright © FOG Project 2012-2020 : https://github.com/FOGProject/
+- Icone de fusée, par GitHub: https://primer.style/octicons/rocket
